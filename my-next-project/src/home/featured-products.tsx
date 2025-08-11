@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export interface FeaturedProduct {
   id: string;
@@ -47,9 +48,11 @@ export default function FeaturedProducts({ products = [], categories = [], title
                     className="group bg-white/20 backdrop-blur-lg rounded-lg shadow-md border border-transparent transition-all duration-200 hover:-translate-y-1 hover:border-[#456882] overflow-hidden"
                   >
                     <div className="w-full h-48 bg-white/10 backdrop-blur-lg">
-                      <img
+                      <Image
                         src={cat.imageUrl}
                         alt={cat.name}
+                        width={400}
+                        height={192}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
@@ -75,9 +78,11 @@ export default function FeaturedProducts({ products = [], categories = [], title
                   className="group bg-[#D2C1B6]/20 backdrop-blur-lg rounded-lg shadow-md border border-transparent transition-all duration-200 hover:-translate-y-1 hover:border-[#456882] overflow-hidden"
                 >
                   <div className="w-full h-48 bg-white/10 backdrop-blur-lg">
-                    <img
+                    <Image
                       src={product.imageUrl}
                       alt={product.name}
+                      width={400}
+                      height={192}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />

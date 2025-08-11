@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export interface PromoItem {
@@ -33,7 +34,7 @@ export default function PromoSection({ promos, heading = "Promotions" }: PromoSe
           {promos.map((promo) => (
             <div key={promo.id} className="bg-white/20 backdrop-blur-lg rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
               {promo.imageUrl && (
-                <img src={promo.imageUrl} alt={promo.title} className="w-full h-32 object-cover" />
+                <Image src={promo.imageUrl} alt={promo.title} width={400} height={128} className="w-full h-32 object-cover" />
               )}
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>

@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 export interface Testimonial {
   id: string;
@@ -66,9 +67,11 @@ export default function Testimonials({
             >
               <div className="flex items-center gap-4">
                 <div className="h-14 w-14 rounded-full overflow-hidden bg-[#D2C1B6] flex-shrink-0 ring-2 ring-[#F9F3EF] group-hover:ring-[#456882] transition-colors duration-300">
-                  <img
+                  <Image
                     src={t.photoUrl}
                     alt={t.name}
+                    width={56}
+                    height={56}
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
