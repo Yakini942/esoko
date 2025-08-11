@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CartItem {
   id: string | number;
   image: string;
@@ -15,7 +17,7 @@ export default function CartItemsList({ items = [] }: { items?: CartItem[] }) {
       {items.map((item, idx) => (
         <div key={item.id || idx} className="flex items-center py-4 gap-4">
           <a href={`/product/${item.id}`} className="block w-16 h-16 rounded overflow-hidden">
-            <img src={item.image} alt={item.title} className="object-cover w-full h-full" />
+            <Image src={item.image} alt={item.title} width={64} height={64} className="object-cover w-full h-full" />
           </a>
           <div className="flex-1">
             <a href={`/product/${item.id}`} className="font-bold text-[--color-primary] hover:underline text-base">

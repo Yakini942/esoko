@@ -1,4 +1,14 @@
-export default function CartOrderSummary({ items = [] }: { items?: any[] }) {
+interface CartItem {
+  id: string | number;
+  image: string;
+  title: string;
+  subtitle?: string;
+  price: number;
+  discountedPrice?: number;
+  quantity: number;
+}
+
+export default function CartOrderSummary({ items = [] }: { items?: CartItem[] }) {
   // Placeholder calculations
   const subtotal = items.reduce((sum, item) => sum + (item.quantity * (item.discountedPrice || item.price)), 0);
   const shipping = 8.99;

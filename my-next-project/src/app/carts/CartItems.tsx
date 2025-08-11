@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface CartItem {
   id: number;
@@ -15,7 +16,7 @@ export default function CartItems({ items }: { items: CartItem[] }) {
     <div className="md:col-span-8 flex flex-col gap-6">
       {items.map((item) => (
         <div key={item.id} className="bg-white rounded-xl shadow flex items-center px-6 py-4 relative min-h-[110px]">
-          <img src={item.image} alt={item.title} className="w-24 h-24 object-cover rounded mr-4" />
+          <Image src={item.image} alt={item.title} width={96} height={96} className="w-24 h-24 object-cover rounded mr-4" />
           <div className="flex-1 flex flex-col justify-center min-w-[180px]">
             <div className="font-semibold text-lg text-gray-900 leading-tight">{item.title}</div>
             <div className="text-xs text-gray-500 mb-1">{item.subtitle}</div>
