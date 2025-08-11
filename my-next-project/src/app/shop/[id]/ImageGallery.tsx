@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, Fragment } from 'react';
+import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
@@ -20,9 +21,11 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
     <section>
       <div className="bg-[#F9F3EF] rounded-lg p-4">
         <div className="relative group overflow-hidden rounded-md">
-          <img
+          <Image
             src={images[selectedIndex]}
             alt={title}
+            width={800}
+            height={600}
             className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] cursor-zoom-in"
             onClick={() => setLightboxOpen(true)}
           />
@@ -52,7 +55,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
               onClick={() => setSelectedIndex(i)}
               aria-label={`Select image ${i + 1}`}
             >
-              <img src={src} alt="Thumbnail" className="w-full h-full object-cover" />
+              <Image src={src} alt="Thumbnail" width={100} height={100} className="w-full h-full object-cover" />
             </button>
           ))}
         </div>
@@ -94,9 +97,11 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
                   </button>
 
                   <div className="relative bg-[#F9F3EF] rounded-md overflow-hidden">
-                    <img
+                    <Image
                       src={images[selectedIndex]}
                       alt="Zoomed"
+                      width={800}
+                      height={600}
                       className="w-full h-auto object-contain"
                     />
                     <button

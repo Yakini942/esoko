@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface RelatedProductsProps {
   images: string[];
@@ -16,7 +17,7 @@ export default function RelatedProducts({ images }: RelatedProductsProps) {
             <Link key={i} href={`/shop/${i + 100}`} className="min-w-[200px]">
               <article className="bg-[#D2C1B6] p-3 rounded-lg shadow-md">
                 <div className="aspect-[4/3] bg-white/50 rounded flex items-center justify-center overflow-hidden">
-                  <img src={img} alt="Related" className="h-full w-auto object-contain" />
+                  <Image src={img} alt="Related" width={200} height={150} className="h-full w-auto object-contain" />
                 </div>
                 <h3 className="mt-2 text-sm font-semibold text-[#1B3C53] line-clamp-2">Product {i + 1}</h3>
                 <p className="text-[#1B3C53] font-bold">${(99 + i).toFixed(2)}</p>
@@ -30,7 +31,7 @@ export default function RelatedProducts({ images }: RelatedProductsProps) {
           <Link key={i} href={`/shop/${i + 200}`}>
             <article className="bg-[#D2C1B6] p-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform">
               <div className="aspect-[4/3] bg-white/50 rounded flex items-center justify-center overflow-hidden">
-                <img src={img} alt="Related" className="h-full w-auto object-contain" />
+                <Image src={img} alt="Related" width={200} height={150} className="h-full w-auto object-contain" />
               </div>
               <h3 className="mt-3 text-sm font-semibold text-[#1B3C53] line-clamp-2">Product {i + 1}</h3>
               <p className="text-[#1B3C53] font-bold">${(149 + i).toFixed(2)}</p>

@@ -12,10 +12,7 @@ export default function ShopPage() {
     imageUrl: `https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80&auto=format&fit=crop&sig=${i}`,
   }));
 
-  const handleResetFilters = () => {
-    // TODO: Wire to FilterSidebar's onClear via lifting state when filters are implemented
-    console.log('Reset filters');
-  };
+
 
   return (
     <main className="min-h-screen px-4 sm:px-6 lg:px-8 py-10">
@@ -39,7 +36,7 @@ export default function ShopPage() {
               <SortViewControls />
             </div>
 
-            <ProductGrid products={sampleProducts} onResetFilters={handleResetFilters} />
+            <ProductGrid products={sampleProducts} />
 
             {/* Pagination */}
             <div className="mt-8">

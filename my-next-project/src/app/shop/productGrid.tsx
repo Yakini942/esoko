@@ -101,14 +101,7 @@ const products = [
 	},
 ];
 
-const categories = [
-	"All Products",
-	"Electronics",
-	"Clothing",
-	"Home & Garden",
-	"Sports",
-	"Books",
-];
+
 
 
 // ...existing code...
@@ -122,10 +115,10 @@ type Product = {
 
 type ProductGridProps = {
 	products: Product[];
-	onResetFilters: () => void;
 };
 
-export default function ProductGrid({ products, onResetFilters }: ProductGridProps) {
+import Image from "next/image";
+export default function ProductGrid({ products }: ProductGridProps) {
 	return (
 		<div className="py-8">
 			<section>
@@ -139,9 +132,11 @@ export default function ProductGrid({ products, onResetFilters }: ProductGridPro
 							key={p.id}
 							className="bg-white rounded-lg shadow p-4 flex flex-col"
 						>
-							<img
+							<Image
 								src={p.imageUrl}
 								alt={p.name}
+								width={400}
+								height={160}
 								className="h-40 w-full object-cover mb-4 rounded"
 							/>
 							<div className="font-semibold text-lg mb-1">{p.name}</div>
