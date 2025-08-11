@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 const products = [
@@ -81,7 +82,7 @@ export default function AdminProducts() {
               {products.map((product, idx) => (
                 <tr key={product.sku} className={idx % 2 === 0 ? "bg-white" : "bg-[#F9F3EF]"}>
                   <td className="px-4 py-3 flex items-center gap-3">
-                    <img src={product.image} alt={product.name} className="w-10 h-10 object-cover rounded" />
+                    <Image src={product.image} alt={product.name} width={40} height={40} className="w-10 h-10 object-cover rounded" />
                     <span className="font-semibold text-[#234052]">{product.name}</span>
                   </td>
                   <td className="px-4 py-3">{product.sku}</td>

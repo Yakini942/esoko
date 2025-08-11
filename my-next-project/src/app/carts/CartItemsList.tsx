@@ -1,4 +1,14 @@
-export default function CartItemsList({ items = [] }: { items?: any[] }) {
+interface CartItem {
+  id: string | number;
+  image: string;
+  title: string;
+  subtitle?: string;
+  price: number;
+  discountedPrice?: number;
+  quantity: number;
+}
+
+export default function CartItemsList({ items = [] }: { items?: CartItem[] }) {
   // Placeholder for cart items
   return (
     <div className="bg-[--color-cream] rounded-lg p-4 divide-y divide-[--color-warm]">

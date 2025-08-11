@@ -11,9 +11,8 @@ import RelatedProducts from "./RelatedProducts";
 import Reviews from "./Reviews";
 import StickyAddToCart from "./StickyAddToCart";
 
-interface ProductDetailProps {
-  params: { id: string };
-}
+
+
 
 const sampleImages = [
   "https://images.unsplash.com/photo-1517059224940-d4af9eec41e5?w=1600&q=80&auto=format&fit=crop",
@@ -30,7 +29,7 @@ const features = [
   "Thunderbolt 4 connectivity",
 ];
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+export default function Page({ params }: { params: { id: string } }) {
   const product = {
     id: params.id,
     title: "Dell XPS 13 Ultra Thin Laptop",

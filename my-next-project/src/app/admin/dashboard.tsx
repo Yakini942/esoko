@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { FaDollarSign, FaShoppingCart, FaBoxOpen, FaUser } from "react-icons/fa";
 
 const stats = [
@@ -72,7 +73,7 @@ export default function AdminDashboard() {
               {lowStock.map((item) => (
                 <li key={item.sku} className="flex items-center justify-between py-3">
                   <div className="flex items-center gap-3">
-                    <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded" />
+                    <Image src={item.image} alt={item.name} width={48} height={48} className="w-12 h-12 object-cover rounded" />
                     <div>
                       <span className="font-semibold text-[#234052]">{item.name}</span>
                       <div className="text-xs text-gray-500">{item.sku}</div>
