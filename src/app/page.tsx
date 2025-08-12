@@ -2,7 +2,6 @@ import Hero from "../home/hero";
 import FeaturedProducts, { CategoryItem } from "../home/featured-products";
 import Testimonials, { Testimonial } from "../home/testimonials";
 import WhyChooseEsoko from "../home/whychooseus";
-import PromoBanners from "../home/promo-banners";
 import PromoSection, { PromoItem } from "../home/promo-section";
 
 export default function Home() {

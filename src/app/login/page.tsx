@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaGoogle, FaFacebook, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaGoogle, FaLock, FaEye, FaEyeSlash, FaApple } from "react-icons/fa";
 
 
 export default function LoginPage() {
@@ -67,9 +67,9 @@ export default function LoginPage() {
           <button className="w-full flex items-center justify-center gap-2 bg-white border border-[#D2C1B6] rounded-md py-2 font-medium text-[#234052] hover:bg-[#F9F3EF] transition-colors">
             <span className="h-5 w-5 flex items-center justify-center text-[#EA4335]"><FaGoogle size={20} /></span> Continue with Google
           </button>
-          <button className="w-full flex items-center justify-center gap-2 bg-white border border-[#D2C1B6] rounded-md py-2 font-medium text-[#234052] hover:bg-[#F9F3EF] transition-colors">
-            <span className="h-5 w-5 flex items-center justify-center text-black"><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.365 17.365c-1.13 1.13-2.63 1.635-4.365 1.635s-3.235-.505-4.365-1.635C2.505 16.235 2 14.735 2 13c0-1.735.505-3.235 1.635-4.365C4.765 7.505 6.265 7 8 7c1.735 0 3.235.505 4.365 1.635C15.495 9.765 16 11.265 16 13c0 1.735-.505 3.235-1.635 4.365z"/></svg></span> Continue with Apple
-          </button>
+            <button className="w-full flex items-center justify-center gap-2 bg-white border border-[#D2C1B6] rounded-md py-2 font-medium text-[#234052] hover:bg-[#F9F3EF] transition-colors">
+              <span className="h-5 w-5 flex items-center justify-center text-black"><FaApple size={20} /></span> Continue with Apple
+            </button>
         </div>
         {/* Footer */}
         <div className="text-xs text-center text-[#456882] mt-6">
